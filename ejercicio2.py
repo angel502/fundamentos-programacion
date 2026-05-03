@@ -1,6 +1,8 @@
-nombre = input("Ingrese su nombre: ").lower() .strip()
+password = input("Ingrese su contraseña: ").strip()
 
-if nombre == "angel":
-    print("Hola angel")
+if len(password) >=8 and not password.isalpha() and not password.isnumeric() and password.find(" ") == -1:
+    print("Contraseña fuerte puede acceder:")
+elif password < 8:
+    print("La contraseña debe ser mas fuerte antes de acceder")
 else:
-    print("Persona no identificada")
+    print("La contraseña debe incluir letras y numeros  y no tener espacios.")
